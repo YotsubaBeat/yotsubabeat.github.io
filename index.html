@@ -2,14 +2,179 @@
 <div id="container">
     <div id="head">
         <p id="h1">About Me</p>
+        <p id="close" onclick="tabClose()">+</p>
+    </div>
+    <p id="h2">Welcome to my website
+    </p>
+    <p id="h3">
+        <span id="s1">I often come under the nickname <span id="s0" onclick="tabClose()">█████████</span>, But feel free to call me by anything that fits your liking. <br>I am a programmer hobbyist and computer architecture enthusiast having a deep interest in alot of things, expanding my knowledge in the interests i have day by day.
+    </p>
+</div>
+<div id="container2">
+    <div id="head2">
+        <p id="h4">Github</p>
+        <p id="close2" onclick="tabClose2()">+</p>
+    </div>
+</div>
+<div id="container3">
+    <div id="head3">
+        <p id="h5">Other</p>
+        <p id="close3" onclick="tabClose3()">+</p>
     </div>
 </div>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@font-face {
+    font-family: barcode;
+    src: url('barcode2.ttf');
+}
+@keyframes tabClose {
+    0% {transform: rotateX(0deg) rotateY(0deg);}
+    67% {transform: rotateX(40deg) rotateY(0deg);}
+    69% {transform: rotateX(-10deg) rotateY(0deg);}
+    80% {transform: rotateX(50deg) rotateY(0deg);}
+    100% {transform: rotateX(90deg) rotateY(0deg);}
+}
+@keyframes transform {
+    0% {transform: rotateX(0deg) rotateY(60deg);left: -10vw;top: 10vh;z-index:2;}
+    20% {transform: rotateX(0deg) rotateY(30deg);left: -5vw;top: 15vh;z-index:2;}
+    57% {transform: rotateX(0deg) rotateY(60deg);left: 0vw;top: 20vh;z-index:3;}
+    69% {transform: rotateX(0deg) rotateY(50deg);left: -5vw;top: 15vh;z-index:2;}
+    89% {transform: rotateX(0deg) rotateY(0deg);left: 15vw;top: 30vh;z-index:3;}
+    100% {transform: rotateX(0deg) rotateY(0deg);left: 15vw;top: 30vh;z-index:3;}
+}
+@keyframes transform2 {
+    0% {transform: rotateX(0deg) rotateY(-60deg);right: -10vw;top: 10vh;z-index:1;}
+    10% {transform: rotateX(0deg) rotateY(-30deg);right: -5vw;top: 15vh;z-index:3;}
+    57% {transform: rotateX(0deg) rotateY(-60deg);right: 0vw;top: 20vh;z-index:3;}
+    69% {transform: rotateX(0deg) rotateY(-50deg);right: 5vw;top: 15vh;z-index:1;}
+    89% {transform: rotateX(0deg) rotateY(-20deg);right: 15vw;top: 30vh;z-index:3;}
+    100% {transform: rotateX(0deg) rotateY(0deg);right: 15vw;top: 30vh;z-index:3;}
+}
+#close {
+    height: 3vh;
+    width: 3vh;
+    position: absolute;
+    top: 1vh;
+    float: right;
+    right: 1vh;
+    bottom: 1vh;
+    margin: 0;
+    font-size: 3vh;
+    color: rgba(255,255,255,1.0);
+    background-color: rgba(120,120,120,1.0);
+    border-radius: 100%;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    transform: rotateZ(45deg);
+    font-family: barcode;
+    font-weight: 400;
+    font-style: normal;
+}
+#close2 {
+    height: 3vh;
+    width: 3vh;
+    position: absolute;
+    top: 1vh;
+    float: right;
+    right: 1vh;
+    bottom: 1vh;
+    margin: 0;
+    font-size: 3vh;
+    color: rgba(255,255,255,1.0);
+    background-color: rgba(120,120,120,1.0);
+    border-radius: 100%;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    transform: rotateZ(45deg);
+    font-family: barcode;
+    font-weight: 400;
+    font-style: normal;
+}
+#close3 {
+    height: 3vh;
+    width: 3vh;
+    position: absolute;
+    top: 1vh;
+    float: right;
+    right: 1vh;
+    bottom: 1vh;
+    margin: 0;
+    font-size: 3vh;
+    color: rgba(255,255,255,1.0);
+    background-color: rgba(120,120,120,1.0);
+    border-radius: 100%;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    transform: rotateZ(45deg);
+    font-family: barcode;
+    font-weight: 400;
+    font-style: normal;
+}
+#s2 {
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+#s1 {
+    position: relative;
+    color: rgba(255,255,255,1.0);
+    font-size: calc((1.5vh + 1.5vw) / 2);
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+#h3 {
+    position: absolute;
+    text-align: center;
+    width: 67vw;
+    color: rgba(255,255,255,1.0);
+    font-family: "Ubuntu Mono", monospace;
+    top: 13vh;
+    margin: 0;
+    left: 1.5vw;
+    right: 1.5vw;
+    font-size: calc((1.5vh + 1.5vw) / 2);
+    font-weight: 400;
+    font-style: normal;
+}
+#h2 {
+    position: absolute;
+    text-align: left;
+    width: 70vw;
+    color: rgba(255,0,0,1.0);
+    font-family: barcode;
+    top: 7.5vh;
+    margin: 0;
+    left: 0;
+    right: 0;
+    font-size: calc((3vh + 3vw) / 2);
+    font-weight: 700;
+    font-style: normal;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #h1 {
     width: 70vw;
-    height: 10vh;
+    height: 5vh;
     position: absolute;
     text-align: center;
     color: rgba(255,255,255,1.0);
@@ -17,15 +182,77 @@
     left: 0;
     right: 0;
     top: 0;
-    font-size: calc((3vh + 3vw) / 2);
+    font-size: calc((1.5vh + 1.5vw) / 2);
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     font-style: normal;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#h4 {
+    width: 70vw;
+    height: 5vh;
+    position: absolute;
+    text-align: center;
+    color: rgba(255,255,255,1.0);
+    margin: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-size: calc((1.5vh + 1.5vw) / 2);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#h5 {
+    width: 70vw;
+    height: 5vh;
+    position: absolute;
+    text-align: center;
+    color: rgba(255,255,255,1.0);
+    margin: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-size: calc((1.5vh + 1.5vw) / 2);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #head {
     width: 70vw;
     background-color: rgba(45,45,45,1.0);
-    height: 10vh;
+    height: 5vh;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#head2 {
+    width: 70vw;
+    background-color: rgba(45,45,45,1.0);
+    height: 5vh;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#head3 {
+    width: 70vw;
+    background-color: rgba(45,45,45,1.0);
+    height: 5vh;
     position: absolute;
     margin: 0;
     top: 0;
@@ -36,15 +263,76 @@
     overflow: hidden;
     height: 60vh;
     width: 70vw;
-    position: fixed;
-    top: 20vh;
+    position: absolute;
+    top: 30vh;
     left: 15vw;
     right: 15vw;
-    bottom: 20vh;
+    bottom: 10vh;
     margin: 0;
     background-color: rgba(0,0,0,1.0);
-    border-radius: 3px;
+    border-radius: 10px;
+    transform: rotateX(0deg);
+    animation: none;
+    z-index: 3;
+}
+#container2 {
+    overflow: hidden;
+    height: 60vh;
+    width: 70vw;
+    position: absolute;
+    top: 10vh;
+    left: -10vw;
+    bottom: 30vh;
+    margin: 0;
+    background-color: rgba(0,0,0,1.0);
+    border-radius: 10px;
+    transform: rotateX(0deg) rotateY(60deg);
+    animation: none;
+    z-index: 2;
+}
+#container3 {
+    overflow: hidden;
+    height: 60vh;
+    width: 70vw;
+    position: absolute;
+    top: 10vh;
+    right: -10vw;
+    float: right;
+    bottom: 30vh;
+    margin: 0;
+    background-color: rgba(0,0,0,1.0);
+    border-radius: 10px;
+    transform: rotateX(0deg) rotateY(-60deg);
+    animation: none;
+    z-index: 1;
+}
+#s0 {
+    cursor: pointer;
 }
 ::selection {
-    background-color: rgba(255,140,0,0.0);
+    background-color: rgba(255,140,0,1.0);
+}
 </style>
+<script>
+    const container = document.getElementById('container');
+    const container2 = document.getElementById('container2');
+    const container3 = document.getElementById('container3');
+    function tabClose() {
+        container.style.backgroundColor = "red";
+        container.style.animation = "tabClose 0.5s forwards";
+        container2.style.animation = "transform 1s forwards";
+    }
+    function tabClose2() {
+        container2.style.backgroundColor = "red";
+        container2.style.animation = "tabClose 0.5s forwards";
+        container2.style.left = "15vw";
+        container2.style.top = "30vh";
+        container3.style.animation = "transform2 1s forwards";
+    }
+    function tabClose3() {
+        container3.style.backgroundColor = "red";
+        container3.style.animation = "tabClose 0.5s forwards";
+        container3.style.right = "15vw";
+        container3.style.top = "30vh";
+    }
+</script>
