@@ -1,338 +1,528 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<div id="container">
-    <div id="head">
-        <p id="h1">About Me</p>
-        <p id="close" onclick="tabClose()">+</p>
-    </div>
-    <p id="h2">Welcome to my website
-    </p>
-    <p id="h3">
-        <span id="s1">I often come under the nickname <span id="s0" onclick="tabClose()">█████████</span>, But feel free to call me by anything that fits your liking. <br>I am a programmer hobbyist and computer architecture enthusiast having a deep interest in alot of things, expanding my knowledge in the interests i have day by day.
-    </p>
+<div id="d1">
+    <p id="p1">About me</p>
+    <p id="op" onclick="aboutMe()">+</p>
 </div>
-<div id="container2">
-    <div id="head2">
-        <p id="h4">Github</p>
-        <p id="close2" onclick="tabClose2()">+</p>
-    </div>
+<div id="d2">
+    <p id="p3">Music Exploration</p>
+    <p id="op2" onclick="musicInt()">+</p>
 </div>
-<div id="container3">
-    <div id="head3">
-        <p id="h5">Other</p>
-        <p id="close3" onclick="tabClose3()">+</p>
-    </div>
+<div id="d3">
+    <p id="p5">Technology Innovasion</p>
+    <p id="op3" onclick="techInno()">+</p>
 </div>
+<div id="d4">
+    <p id="p6">History Learning</p>
+    <p id="op4" onclick="histLear()">+</p>
+</div>
+<div id="d5">
+    <p id="p7">Machine Coding</p>
+    <p id="op5" onclick="machCod()">+</p>
+</div>
+<div id="aboutMe">
+    <p id="p2"><span id="s1">I often come under the nickname <span id="s0">█████████</span>, But feel free to call me by anything that fits your liking. <br>I am a programming hobbyist and computer architecture enthusiast having a deep interest in alot of things, expanding my knowledge in the interests i have day by day.<br>Explore my interests i have decided to write about if you want to know more about what i especially take interest in.
+</div>
+<div id="musicInt">
+    <p id="p4">There is no doubt about the fact that music is subjective, and there is nothing called "wrong" or "right" music.<br>That's why i listen in a other way, instead of getting stuck on a specific genre and stop willing to enjoy other kind of music, I explore all kinds of genre and judge them by quality and how they fit into the genre that they claim to be a part of.<br>One music microgenre i take interest in is breakcore, If there is one artist that make not only breakcore music but music that follows other genres aswell, that would be Cynthoni (Formerly Sewerslvt).<br>Many consider her music to not follow the breakcore genre, since apparently, generic breakcore is practicularly just a clusterfuck of the iconic amen break samples.<br>But even though she may not make the most generic breakcore music, She is by far the key contributor to the breakcore music genre's rise in popularity.</p>
+</div>
+<div id="techInno">
+    <p id="p4">{}</p>
+</div>
+<div id="histLear">
+    <p id="p4">{}</p>
+</div>
+<div id="machCod">
+    <p id="p4">{}</p>
+</div>
+<div id="i1"></div>
+<img id="i2" src="logo.gif"/>
+<div id="blob"></div>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+::selection {
+    filter: invert(100%);
+}
+body {
+    background-color: rgba(255,255,255,1.0);
+    overflow: hidden;
+}
 @font-face {
     font-family: barcode;
     src: url('barcode2.ttf');
 }
-@keyframes tabClose {
-    0% {transform: rotateX(0deg) rotateY(0deg);}
-    67% {transform: rotateX(40deg) rotateY(0deg);}
-    69% {transform: rotateX(-10deg) rotateY(0deg);}
-    80% {transform: rotateX(50deg) rotateY(0deg);}
-    100% {transform: rotateX(90deg) rotateY(0deg);}
+@font-face {
+    font-family: barcode2;
+    src: url('barcode.ttf');
 }
-@keyframes transform {
-    0% {transform: rotateX(0deg) rotateY(60deg);left: -10vw;top: 10vh;z-index:2;}
-    20% {transform: rotateX(0deg) rotateY(30deg);left: -5vw;top: 15vh;z-index:2;}
-    57% {transform: rotateX(0deg) rotateY(60deg);left: 0vw;top: 20vh;z-index:3;}
-    69% {transform: rotateX(0deg) rotateY(50deg);left: -5vw;top: 15vh;z-index:2;}
-    89% {transform: rotateX(0deg) rotateY(0deg);left: 15vw;top: 30vh;z-index:3;}
-    100% {transform: rotateX(0deg) rotateY(0deg);left: 15vw;top: 30vh;z-index:3;}
+@keyframes btnopen {
+    0% {transform: rotateZ(0deg);opacity:0.7;color:rgba(50,50,50,1.0);}
+    100% {transform: rotateZ(45deg);opacity:1.0;color:red}
 }
-@keyframes transform2 {
-    0% {transform: rotateX(0deg) rotateY(-60deg);right: -10vw;top: 10vh;z-index:1;}
-    10% {transform: rotateX(0deg) rotateY(-30deg);right: -5vw;top: 15vh;z-index:3;}
-    57% {transform: rotateX(0deg) rotateY(-60deg);right: 0vw;top: 20vh;z-index:3;}
-    69% {transform: rotateX(0deg) rotateY(-50deg);right: 5vw;top: 15vh;z-index:1;}
-    89% {transform: rotateX(0deg) rotateY(-20deg);right: 15vw;top: 30vh;z-index:3;}
-    100% {transform: rotateX(0deg) rotateY(0deg);right: 15vw;top: 30vh;z-index:3;}
+@keyframes btnclose {
+    0% {transform: rotateZ(45deg);opacity:1.0;color:red}
+    100% {transform: rotateZ(0deg);opacity:0.7;color:rgba(50,50,50,1.0);}
 }
-#close {
-    height: 3vh;
-    width: 3vh;
-    position: absolute;
-    top: 1vh;
-    float: right;
-    right: 1vh;
-    bottom: 1vh;
-    margin: 0;
-    font-size: 3vh;
-    color: rgba(255,255,255,1.0);
-    background-color: rgba(120,120,120,1.0);
-    border-radius: 100%;
-    cursor: pointer;
-    text-align: center;
-    vertical-align: middle;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    transform: rotateZ(45deg);
-    font-family: barcode;
-    font-weight: 400;
-    font-style: normal;
+@keyframes slideopen {
+    0% {transform: rotateX(90deg);opacity:0.0;}
+    100% {transform: rotateX(0deg);opacity:1.0;}
 }
-#close2 {
-    height: 3vh;
-    width: 3vh;
-    position: absolute;
-    top: 1vh;
-    float: right;
-    right: 1vh;
-    bottom: 1vh;
-    margin: 0;
-    font-size: 3vh;
-    color: rgba(255,255,255,1.0);
-    background-color: rgba(120,120,120,1.0);
-    border-radius: 100%;
-    cursor: pointer;
-    text-align: center;
-    vertical-align: middle;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    transform: rotateZ(45deg);
-    font-family: barcode;
-    font-weight: 400;
-    font-style: normal;
+@keyframes slideclose {
+    0% {transform: rotateX(0deg);opacity:1.0;}
+    100% {transform: rotateX(-90deg);opacity:0.0;}
 }
-#close3 {
-    height: 3vh;
-    width: 3vh;
-    position: absolute;
-    top: 1vh;
-    float: right;
-    right: 1vh;
-    bottom: 1vh;
-    margin: 0;
-    font-size: 3vh;
-    color: rgba(255,255,255,1.0);
-    background-color: rgba(120,120,120,1.0);
-    border-radius: 100%;
-    cursor: pointer;
-    text-align: center;
-    vertical-align: middle;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    transform: rotateZ(45deg);
-    font-family: barcode;
-    font-weight: 400;
-    font-style: normal;
-}
-#s2 {
-    font-family: "Ubuntu Mono", monospace;
-    font-weight: 700;
-    font-style: normal;
-}
-#s1 {
-    position: relative;
-    color: rgba(255,255,255,1.0);
-    font-size: calc((1.5vh + 1.5vw) / 2);
-    font-family: "Ubuntu Mono", monospace;
-    font-weight: 400;
-    font-style: normal;
-}
-#h3 {
-    position: absolute;
-    text-align: center;
-    width: 67vw;
-    color: rgba(255,255,255,1.0);
-    font-family: "Ubuntu Mono", monospace;
-    top: 13vh;
-    margin: 0;
-    left: 1.5vw;
-    right: 1.5vw;
-    font-size: calc((1.5vh + 1.5vw) / 2);
-    font-weight: 400;
-    font-style: normal;
-}
-#h2 {
-    position: absolute;
-    text-align: left;
-    width: 70vw;
-    color: rgba(255,0,0,1.0);
-    font-family: barcode;
-    top: 7.5vh;
-    margin: 0;
-    left: 0;
-    right: 0;
-    font-size: calc((3vh + 3vw) / 2);
-    font-weight: 700;
-    font-style: normal;
-    vertical-align: middle;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#h1 {
-    width: 70vw;
-    height: 5vh;
-    position: absolute;
-    text-align: center;
-    color: rgba(255,255,255,1.0);
-    margin: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    font-size: calc((1.5vh + 1.5vw) / 2);
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    vertical-align: middle;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#h4 {
-    width: 70vw;
-    height: 5vh;
-    position: absolute;
-    text-align: center;
-    color: rgba(255,255,255,1.0);
-    margin: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    font-size: calc((1.5vh + 1.5vw) / 2);
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    vertical-align: middle;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#h5 {
-    width: 70vw;
-    height: 5vh;
-    position: absolute;
-    text-align: center;
-    color: rgba(255,255,255,1.0);
-    margin: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    font-size: calc((1.5vh + 1.5vw) / 2);
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    vertical-align: middle;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#head {
-    width: 70vw;
-    background-color: rgba(45,45,45,1.0);
-    height: 5vh;
-    position: absolute;
-    margin: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-#head2 {
-    width: 70vw;
-    background-color: rgba(45,45,45,1.0);
-    height: 5vh;
-    position: absolute;
-    margin: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-#head3 {
-    width: 70vw;
-    background-color: rgba(45,45,45,1.0);
-    height: 5vh;
-    position: absolute;
-    margin: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-#container {
-    overflow: hidden;
-    height: 60vh;
-    width: 70vw;
-    position: absolute;
-    top: 30vh;
-    left: 15vw;
-    right: 15vw;
-    bottom: 10vh;
-    margin: 0;
-    background-color: rgba(0,0,0,1.0);
-    border-radius: 10px;
-    transform: rotateX(0deg);
-    animation: none;
-    z-index: 3;
-}
-#container2 {
-    overflow: hidden;
-    height: 60vh;
-    width: 70vw;
-    position: absolute;
-    top: 10vh;
-    left: -10vw;
-    bottom: 30vh;
-    margin: 0;
-    background-color: rgba(0,0,0,1.0);
-    border-radius: 10px;
-    transform: rotateX(0deg) rotateY(60deg);
-    animation: none;
-    z-index: 2;
-}
-#container3 {
-    overflow: hidden;
-    height: 60vh;
-    width: 70vw;
-    position: absolute;
-    top: 10vh;
-    right: -10vw;
-    float: right;
-    bottom: 30vh;
-    margin: 0;
-    background-color: rgba(0,0,0,1.0);
-    border-radius: 10px;
-    transform: rotateX(0deg) rotateY(-60deg);
-    animation: none;
+#blob {
+  background-color: rgba(0,0,0,1.0);
+  height: 100vh;
+  width: 100vh;
+  position: absolute;
+  left: calc(100vw - 100vh);
+  top: 0vh;
+  border-radius: 100%;
+  filter: blur(30vw);
+  opacity: 0.8;
     z-index: 1;
 }
-#s0 {
-    cursor: pointer;
+#i1 {
+    position: absolute;
+    width: calc(80vw - 15vh);
+    height: 50vh;
+    margin: 0;
+    top: 25vh;
+    left: calc(20vw + 10vh);
+    right: 0;
+    background-color: rgba(200,200,200,1.0);
+    z-index: 0;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-::selection {
-    background-color: rgba(255,140,0,1.0);
+#i2 {
+    position: absolute;
+    width: calc(80vw - 15vh);
+    height: 50vh;
+    margin: 0;
+    top: 25vh;
+    left: calc(20vw + 10vh);
+    object-fit:cover;
+    right: 0;
+    opacity: 0.1;
+    z-index: 3;
+    filter: invert(100%);
+}
+#p1 {
+    opacity: 0.7;
+    color: rgba(50,50,50);
+    position: absolute;
+    float: left;
+    left: 0;
+}
+#d1 {
+    font-family: "Ubuntu", sans-serif;
+    opacity: 0.7;
+    font-weight: 700;
+    font-style: normal;
+    font-size: calc((2vh + 2vw) / 2);
+    height: 10vh;
+    width: 20vw;
+    position: absolute;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(50,50,50,1.0);
+    z-index: 3;
+    margin: 0;
+    left: 5vh;
+    float: bottom;
+    bottom: 67vh;
+}
+#d2 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: calc((2vh + 2vw) / 2);
+    height: 10vh;
+    float: bottom;
+    bottom: 56vh;
+    margin: 0;
+    left: 5vh;
+    width: 20vw;
+    position: absolute;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(50,50,50,1.0);
+    z-index: 3;
+    opacity: 0.7;
+}
+#d3 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: calc((2vh + 2vw) / 2);
+    height: 10vh;
+    float: bottom;
+    bottom: 45vh;
+    margin: 0;
+    left: 5vh;
+    width: 20vw;
+    position: absolute;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(50,50,50,1.0);
+    z-index: 3;
+    opacity: 0.7;
+}
+#d4 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: calc((2vh + 2vw) / 2);
+    height: 10vh;
+    float: bottom;
+    bottom: 34vh;
+    margin: 0;
+    left: 5vh;
+    width: 20vw;
+    position: absolute;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(50,50,50,1.0);
+    z-index: 3;
+    opacity: 0.7;
+}
+#d5 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: calc((2vh + 2vw) / 2);
+    height: 10vh;
+    float: bottom;
+    bottom: 23vh;
+    margin: 0;
+    left: 5vh;
+    width: 20vw;
+    position: absolute;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(50,50,50,1.0);
+    z-index: 3;
+    opacity: 0.7;
+}
+#op {
+    position: absolute;
+    font-family: barcode;
+    font-weight: 700;
+    font-style: normal;
+    font-size: calc((5vh + 5vw) / 2);
+    cursor: pointer;
+    animation: none;
+    float: right;
+    text-align: right;
+    opacity: 0.7;
+    right: 0;
+}
+#op2 {
+    position: absolute;
+    font-family: barcode;
+    font-weight: 700;
+    font-style: normal;
+    font-size: calc((5vh + 5vw) / 2);
+    cursor: pointer;
+    animation: none;
+    float: right;
+    text-align: right;
+    opacity: 0.7;
+    right: 0;
+}
+#op3 {
+    position: absolute;
+    font-family: barcode;
+    font-weight: 700;
+    font-style: normal;
+    font-size: calc((5vh + 5vw) / 2);
+    cursor: pointer;
+    animation: none;
+    float: right;
+    text-align: right;
+    opacity: 0.7;
+    right: 0;
+}
+#op4 {
+    position: absolute;
+    font-family: barcode;
+    font-weight: 700;
+    font-style: normal;
+    font-size: calc((5vh + 5vw) / 2);
+    cursor: pointer;
+    animation: none;
+    float: right;
+    text-align: right;
+    opacity: 0.7;
+    right: 0;
+}
+#op5 {
+    position: absolute;
+    font-family: barcode;
+    font-weight: 700;
+    font-style: normal;
+    font-size: calc((5vh + 5vw) / 2);
+    cursor: pointer;
+    animation: none;
+    float: right;
+    text-align: right;
+    opacity: 0.7;
+    right: 0;
+}
+#aboutMe {
+    position: absolute;
+    width: calc(80vw - 15vh);
+    height: 50vh;
+    margin: 0;
+    top: 25vh;
+    left: calc(20vw + 10vh);
+    background-color: red;
+    right: 0;
+    opacity: 0.0;
+    animation: none;
+    z-index: 1;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#musicInt {
+    position: absolute;
+    width: calc(80vw - 15vh);
+    height: 50vh;
+    margin: 0;
+    top: 25vh;
+    left: calc(20vw + 10vh);
+    background-color: red;
+    right: 0;
+    opacity: 0.0;
+    animation: none;
+    z-index: 1;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#techInno {
+    position: absolute;
+    width: calc(80vw - 15vh);
+    height: 50vh;
+    margin: 0;
+    top: 25vh;
+    left: calc(20vw + 10vh);
+    background-color: red;
+    right: 0;
+    opacity: 0.0;
+    animation: none;
+    z-index: 1;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#histLear {
+    position: absolute;
+    width: calc(80vw - 15vh);
+    height: 50vh;
+    margin: 0;
+    top: 25vh;
+    left: calc(20vw + 10vh);
+    background-color: red;
+    right: 0;
+    opacity: 0.0;
+    animation: none;
+    z-index: 1;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#machCod {
+    position: absolute;
+    width: calc(80vw - 15vh);
+    height: 50vh;
+    margin: 0;
+    top: 25vh;
+    left: calc(20vw + 10vh);
+    background-color: red;
+    right: 0;
+    opacity: 0.0;
+    animation: none;
+    z-index: 1;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#p2 {
+    font-family: "Ubuntu Mono", Monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: calc((2vh + 2vw) / 2); 
+    width: calc(80vw - 15vh);
+    opacity: 0.7;
+    color: rgba(0,0,0,1.0);
+    text-align: center;
+    filter: invert(100%);
+}
+#p4 {
+    font-family: "Ubuntu Mono", Monospace;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    font-size: calc((2vh + 2vw) / 2); 
+    width: calc(80vw - 15vh);
+    color: rgba(0,0,0,1.0);
+    filter: invert(100%);
+}
+#p3 {
+    opacity: 0.7;
+    position: absolute;
+    float: left;
+    left: 0;
+}
+#p5 {
+    opacity: 0.7;
+    position: absolute;
+    float: left;
+    left: 0;
+}
+#p6 {
+    opacity: 0.7;
+    position: absolute;
+    float: left;
+    left: 0;
+}
+#p7 {
+    opacity: 0.7;
+    position: absolute;
+    float: left;
+    left: 0;
+}
+#s0 {
+    filter: blur(20px);
 }
 </style>
 <script>
-    const container = document.getElementById('container');
-    const container2 = document.getElementById('container2');
-    const container3 = document.getElementById('container3');
-    function tabClose() {
-        container.style.backgroundColor = "red";
-        container.style.animation = "tabClose 0.5s forwards";
-        container2.style.animation = "transform 1s forwards";
+    var op5 = document.getElementById('op5');
+    var op4 = document.getElementById('op4');
+    var op3 = document.getElementById('op3');
+    var op2 = document.getElementById('op2');
+    var op = document.getElementById('op');
+    var abMe = document.getElementById('aboutMe');
+    var mcit = document.getElementById('musicInt');
+    var thio = document.getElementById('techInno');
+    var htlr = document.getElementById('histLear');
+    var mccd = document.getElementById('machCod');
+    function aboutMe() {
+        op.style.animation = "btnopen 1s forwards";
+        abMe.style.animation = "slideopen 2s forwards";
+        op.setAttribute("onclick","closeMe()");
+        op2.setAttribute("onclick","");
+        op3.setAttribute("onclick","");
+        op4.setAttribute("onclick","");
+        op5.setAttribute("onclick","");
     }
-    function tabClose2() {
-        container2.style.backgroundColor = "red";
-        container2.style.animation = "tabClose 0.5s forwards";
-        container2.style.left = "15vw";
-        container2.style.top = "30vh";
-        container3.style.animation = "transform2 1s forwards";
+    function musicInt() {
+        op2.style.animation = "btnopen 1s forwards";
+        mcit.style.animation = "slideopen 2s forwards";
+        op2.setAttribute("onclick","closeMe2()");
+        op.setAttribute("onclick","");
+        op3.setAttribute("onclick","");
+        op4.setAttribute("onclick","");
+        op5.setAttribute("onclick","");
     }
-    function tabClose3() {
-        container3.style.backgroundColor = "red";
-        container3.style.animation = "tabClose 0.5s forwards";
-        container3.style.right = "15vw";
-        container3.style.top = "30vh";
+    function techInno() {
+        op3.style.animation = "btnopen 1s forwards";
+        thio.style.animation = "slideopen 2s forwards";
+        op2.setAttribute("onclick","");
+        op.setAttribute("onclick","");
+        op3.setAttribute("onclick","closeMe3()");
+        op4.setAttribute("onclick","");
+        op5.setAttribute("onclick","");
     }
+    function histLear() {
+        op4.style.animation = "btnopen 1s forwards";
+        htlr.style.animation = "slideopen 2s forwards";
+        op2.setAttribute("onclick","");
+        op.setAttribute("onclick","");
+        op3.setAttribute("onclick","");
+        op4.setAttribute("onclick","closeMe4()");
+        op5.setAttribute("onclick","");
+    }
+    function machCod() {
+        op5.style.animation = "btnopen 1s forwards";
+        mccd.style.animation = "slideopen 2s forwards";
+        op2.setAttribute("onclick","");
+        op.setAttribute("onclick","");
+        op3.setAttribute("onclick","");
+        op4.setAttribute("onclick","");
+        op5.setAttribute("onclick","closeMe5()");
+    }
+    function closeMe5() {
+        op5.style.animation = "btnclose 1s forwards";
+        mccd.style.animation = "slideclose 2s forwards";
+        op5.setAttribute("onclick","machCod()");
+        op4.setAttribute("onclick","histLear()");
+        op3.setAttribute("onclick","techInno()");
+        op2.setAttribute("onclick","musicInt()");
+        op.setAttribute("onclick","aboutMe()");
+    }
+    function closeMe4() {
+        op4.style.animation = "btnclose 1s forwards";
+        htlr.style.animation = "slideclose 2s forwards";
+        op5.setAttribute("onclick","machCod()");
+        op4.setAttribute("onclick","histLear()");
+        op3.setAttribute("onclick","techInno()");
+        op2.setAttribute("onclick","musicInt()");
+        op.setAttribute("onclick","aboutMe()");
+    }
+    function closeMe3() {
+        op3.style.animation = "btnclose 1s forwards";
+        thio.style.animation = "slideclose 2s forwards";
+        op5.setAttribute("onclick","machCod()");
+        op4.setAttribute("onclick","histLear()");
+        op3.setAttribute("onclick","techInno()");
+        op2.setAttribute("onclick","musicInt()");
+        op.setAttribute("onclick","aboutMe()");
+    }
+    function closeMe2() {
+        op2.style.animation = "btnclose 1s forwards";
+        mcit.style.animation = "slideclose 2s forwards";
+        op5.setAttribute("onclick","machCod()");
+        op4.setAttribute("onclick","histLear()");
+        op3.setAttribute("onclick","techInno()");
+        op2.setAttribute("onclick","musicInt()");
+        op.setAttribute("onclick","aboutMe()");
+    }
+    function closeMe() {
+        op.style.animation = "btnclose 1s forwards";
+        abMe.style.animation = "slideclose 2s forwards";
+        op5.setAttribute("onclick","machCod()");
+        op4.setAttribute("onclick","histLear()");
+        op3.setAttribute("onclick","techInno()");
+        op2.setAttribute("onclick","musicInt()");
+        op.setAttribute("onclick","aboutMe()");
+    }
+    const blob = document.getElementById("blob");
+
+    window.onpointermove = event => { 
+        const { clientX, clientY } = event;
+        blob.animate({
+            left: `calc(${clientX}px - 15%)`,
+            top: `calc(${clientY}px - 15%)`
+        }, { duration: 3000, fill: "forwards" });
+    };
 </script>
